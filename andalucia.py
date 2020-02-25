@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import os
+import os, sys
 
 # Frecuencias de las distintas notas para beep
 notas={"Do":261.6,"Do#":277.2,"Re":293.7,"Re#":311.1,"Mi":329.6,"Fa":349.2,"Fa#":370.0,"Sol":392.0,"Sol#":415.3,"La":440.0,"La#":466.2,"Si":493.9,"Do":523.2,"--":0}
@@ -30,8 +30,11 @@ musica="3Do 3Re 5Mi 3Fa 3La 4Sol 3Fa# 4Sol 4Re 6-- 3La 3La 6La 1Si 1La 4Sol 3Fa 
 musica=musica.split(" ")
 for nota in musica: 
     duracion=tiempo[nota[0]]
+    dur=int(duracion)/1000
     if nota[1:]=="--":
-        dur=int(duracion)/1000
         os.system("sleep %f" % dur)
     else:
-        os.system("beep -l %d -f %d"%(duracion,notas[nota[1:]]))
+        if len(sys.argv) == 2 and sys.argv[1] == "sox":
+            os.system("play -n -c1 synth %f sine %d"%(dur,notas[nota[1:]]))
+        else:
+            os.system("beep -l %d -f %d"%(duracion,notas[nota[1:]]))
