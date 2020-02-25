@@ -31,3 +31,11 @@ Los tipos de notas son:
 * 6: redonda
 
 Si ponemos una nota `--` estamos indicando un silencio.
+
+## Si no tienes speaker...
+
+    apt install sox
+
+Ejecución:
+
+    python3 andalucia.py sox
