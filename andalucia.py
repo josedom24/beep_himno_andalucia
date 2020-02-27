@@ -2,7 +2,7 @@
 import os, sys
 
 # Frecuencias de las distintas notas para beep
-notas={"Do":261.6,"Do#":277.2,"Re":293.7,"Re#":311.1,"Mi":329.6,"Fa":349.2,"Fa#":370.0,"Sol":392.0,"Sol#":415.3,"La":440.0,"La#":466.2,"Si":493.9,"Do":523.2,"--":0}
+notas={"Do1":261.6,"Do#":277.2,"Re":293.7,"Re#":311.1,"Mi":329.6,"Fa":349.2,"Fa#":370.0,"Sol":392.0,"Sol#":415.3,"La":440.0,"La#":466.2,"Si":493.9,"Do":523.2,"--":0}
 
 # Los tipos de notas están especificadas por un número
 
@@ -23,7 +23,7 @@ tiempo={"0":semicorchea,"1":2*semicorchea,"2":6*semicorchea,"3":4*semicorchea,"4
 
 # Guardamos la partitura en la cadena "musica", las notas están separada por un espacio. La nota "--" es un silencio. Se indica el tipo de nota (un número) y la nota
 
-musica="3Do 3Re 5Mi 3Fa 3La 4Sol 3Fa# 4Sol 4Re 6-- 3La 3La 6La 1Si 1La 4Sol 3Fa 1Sol 1Fa 5Mi 6-- 3Do 3Re 5Mi 3Fa 3La 4Sol 3Fa# 4Sol 4Re 6-- 3La 3La 6La 1Si 1La 4Sol 3Fa 1Sol 1Fa 5Mi 7-- 6Do 6Sol 3Fa 3Sol 4Fa 6Mi 6Do 7Sol 3Fa 4La 1Sol 1Fa 4Mi"
+musica="3Do 3Re 5Mi 3Fa 3La 4Sol 3Fa# 4Sol 4Re 6-- 3La 3La 6La 1Si 1La 4Sol 3Fa 1Sol 1Fa 5Mi 6-- 3Do 3Re 5Mi 3Fa 3La 4Sol 3Fa# 4Sol 4Re 6-- 3La 3La 6La 1Si 1La 4Sol 3Fa 1Sol 1Fa 5Mi 7-- 6Do1 6Sol 3Fa 3Sol 4Fa 6Mi 6Do1 7Sol 3Fa 4La 1Sol 1Fa 4Mi"
 
 # Programa principal
 
